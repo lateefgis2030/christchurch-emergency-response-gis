@@ -127,6 +127,17 @@ https://www.arcgis.com/apps/dashboards/23a8026ce7374bf48eda961269ad7b62
 
 ---
 
+---
+
+## Project Case Study
+
+📄 **[View / Download the Christchurch Emergency Response Case Study](./Christchurch_Emergency_Response_Case_Study.pdf)**
+
+The 4-page case study documents the complete project workflow, including road network preparation, GIS QA/QC, eight ModelBuilder automation workflows, Network Analyst, fire and police emergency response routing, ArcGIS Online Web GIS, and the final interactive ArcGIS Dashboard.
+
+---
+
 **Mohammed Abdul Lateef**  
 GIS Analyst  
-Personal GIS Portfolio Project
+September 2026
+
