@@ -17,31 +17,77 @@ ArcGIS Pro → Road Network Preparation → GIS QA/QC → Network Dataset → Tr
 
 ## ModelBuilder Automation
 
-Eight ModelBuilder workflows were developed:
+Eight ModelBuilder workflows were developed to automate the preparation, QA/QC, network development, and emergency response analysis.
 
-1. **01_Prepare_Study_Area**  
-   Prepares the Christchurch study boundary and establishes the geographic extent for project processing.
+### 1. 01_Prepare_Study_Area
 
-2. **02_Prepare_Road_Network**  
-   Prepares and cleans the road network used for routing and emergency response analysis.
+Prepares the Christchurch study boundary and establishes the geographic extent used throughout the project.  
+The workflow projects the source data, repairs geometry, creates required fields, and calculates geometry attributes.
 
-3. **03_Prepare_Emergency_Facilities**  
-   Prepares fire and police station datasets for use as emergency response facilities.
+![01 Prepare Study Area](Screenshots/1.png)
 
-4. **04_Road_Network_Connectivity_QA**  
-   Performs road geometry and connectivity QA/QC before building the network dataset.
+---
 
-5. **05_Prepare_Network_Attributes**  
-   Prepares road length, speed and travel-time attributes required for network analysis.
+### 2. 02_Prepare_Road_Network
 
-6. **06_Build_Network_Dataset**  
-   Builds the Christchurch Emergency Network Dataset and prepares it for routing analysis.
+Prepares the Christchurch road network for routing and network analysis.  
+The model clips roads to the study area, repairs geometry, creates required attributes, and calculates network-related fields.
 
-7. **07_Emergency_Response_Analysis**  
-   Performs Closest Facility analysis to determine the optimized fire emergency response route.
+![02 Prepare Road Network](Screenshots/2.png)
 
-8. **08_Police_Emergency_Response_Analysis**  
-   Performs police-specific Closest Facility analysis and calculates the optimized police response route.
+---
+
+### 3. 03_Prepare_Emergency_Facilities
+
+Prepares fire and police station datasets for emergency response analysis.  
+The workflow clips facility datasets, converts required features to points, and prepares attributes for network analysis.
+
+![03 Prepare Emergency Facilities](Screenshots/3.png)
+
+---
+
+### 4. 04_Road_Network_Connectivity_QA
+
+Performs geometry and connectivity QA/QC on the prepared road network.  
+The model checks geometry, repairs detected issues, creates a QA working dataset, and integrates connected road features.
+
+![04 Road Network Connectivity QA](Screenshots/4.png)
+
+---
+
+### 5. 05_Prepare_Network_Attributes
+
+Creates and calculates the road attributes required for network analysis.  
+The workflow prepares road length, geometry, speed, and travel-time information used by the routing network.
+
+![05 Prepare Network Attributes](Screenshots/5.png)
+
+---
+
+### 6. 06_Build_Network_Dataset
+
+Prepares the final road network structure used to construct the Christchurch Emergency Network Dataset.  
+The model organizes the transportation feature dataset and produces the finalized network-ready road features.
+
+![06 Build Network Dataset](Screenshots/6.png)
+
+---
+
+### 7. 07_Emergency_Response_Analysis
+
+Automates the fire emergency Closest Facility analysis using the Christchurch network dataset.  
+Fire stations and the emergency incident are loaded into the analysis and solved to identify the optimized response route.
+
+![07 Emergency Response Analysis](Screenshots/7.png)
+
+---
+
+### 8. 08_Police_Emergency_Response_Analysis
+
+Automates the police emergency Closest Facility analysis using the same network framework.  
+Police stations and the emergency incident are loaded and solved to determine the optimized police response route.
+
+![08 Police Emergency Response Analysis](Screenshots/8.png)
 
 ## Emergency Response Results
 
